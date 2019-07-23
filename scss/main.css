@@ -253,4 +253,7 @@ nav img {
   #contact form input {
     width: 100%;
   }
+  #footer ul {
+    text-align: center;
+  }
 }
