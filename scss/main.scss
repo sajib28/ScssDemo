@@ -19,6 +19,7 @@ $menu-hover:#F2E416;
     -o-transition: $what $time $how;
     transition: $what $time $how;
 }
+
 /*End Transition mixin*/
 html,
 body {
@@ -121,7 +122,7 @@ nav {
                 @include transition (all, 0.3s, ease);
 
                 &:hover {
-                    color:$menu-hover;
+                    color: $menu-hover;
                 }
 
             }
@@ -129,6 +130,7 @@ nav {
         }
     }
 }
+
 /*===============End Header Section========*/
 /*===============About Section=============*/
 #about {
@@ -141,6 +143,7 @@ nav {
 
 
 }
+
 /*===============End About Section=============*/
 /*===============Project Section=============*/
 #project {
@@ -176,6 +179,7 @@ nav {
 
     }
 }
+
 /*===============End Project Section=============*/
 /*===============blog Section=============*/
 #blog {
@@ -191,6 +195,7 @@ nav {
         }
     }
 }
+
 /*===============End blog Section=============*/
 /*===============Contact Section=============*/
 #contact {
@@ -202,9 +207,9 @@ nav {
         display: block;
 
         input {
-            width: 98%;
+            width: 100%;
             margin: 0 0 15px 0;
-            padding: 8px 1%;
+            padding: 8px 15px;
         }
 
         textarea {
@@ -214,6 +219,7 @@ nav {
     }
 
 }
+
 /*===============End Contact Section=============*/
 /*===============Footer Section=============*/
 
@@ -234,11 +240,12 @@ nav {
                 text-decoration: none;
                 padding: 10px;
                 font-size: 15px;
-               @include transition(all, 0.3s, ease);
-                &:hover{
+                @include transition(all, 0.3s, ease);
+
+                &:hover {
                     color: $menu-hover;
                 }
-                
+
             }
         }
 
@@ -249,14 +256,33 @@ nav {
         color: #fff;
     }
 }
+
 /*===============End Footer Section=============*/
 
 /*====================Responsive Css=============*/
 
 @media (min-width: 320px) and (max-width: 480px) {
-    #contact{
-        form{
-            width:100%;
+
+    header {
+        height: auto;
+    }
+
+    #about {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    #contact {
+        padding: 0 15px;
+
+        form {
+            width: 100%;
+
+            input {
+                width: 100%;
+
+            }
         }
+
     }
 }

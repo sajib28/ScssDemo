@@ -186,9 +186,9 @@ nav img {
 }
 
 #contact form input {
-  width: 98%;
+  width: 100%;
   margin: 0 0 15px 0;
-  padding: 8px 1%;
+  padding: 8px 15px;
 }
 
 #contact form textarea {
@@ -237,7 +237,20 @@ nav img {
 /*===============End Footer Section=============*/
 /*====================Responsive Css=============*/
 @media (min-width: 320px) and (max-width: 480px) {
+  header {
+    height: auto;
+  }
+  #about {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  #contact {
+    padding: 0 15px;
+  }
   #contact form {
+    width: 100%;
+  }
+  #contact form input {
     width: 100%;
   }
 }
