@@ -1,0 +1,10 @@
+install ruby installer
+gem install sass
+or 
+install node.js
+then 
+use cmd commmand
+npm install -g sass
+
+use that command for file mapping
+sass --watch input.scss output.css

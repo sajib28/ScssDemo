@@ -1,0 +1,262 @@
+/*==========Reset Css=======*/
+/*All variables*/
+$heading-font:'Roboto',
+sans-serif;
+$body-font:'Open Sans',
+sans-serif;
+$primary-color:#419A1C;
+$white:#fff;
+$black:#000;
+$light-white:#F5F8FD;
+$menu-hover:#F2E416;
+/*End all variables*/
+
+/*Transition Mixin*/
+@mixin transition($what: all, $time: 0.2s, $how: ease-in-out) {
+    -webkit-transition: $what $time $how;
+    -moz-transition: $what $time $how;
+    -ms-transition: $what $time $how;
+    -o-transition: $what $time $how;
+    transition: $what $time $how;
+}
+/*End Transition mixin*/
+html,
+body {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    font-family: $body-font;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    font-family: $heading-font;
+}
+
+p {
+    font-family: $body-font;
+    font-size: 14px;
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-family: $body-font;
+}
+
+section {
+    padding: 60px 0 60px 0;
+}
+
+.title-heading {
+    text-align: center;
+    margin-bottom: 40px;
+
+    h1 {
+        font-size: 35px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 25px;
+    }
+}
+
+.content-padding {
+    padding-top: 40px;
+}
+
+/*==========End Reset Css=======*/
+
+/*==========Header Section=======*/
+header {
+    overflow: hidden;
+    background: $primary-color;
+    height: 100px;
+    padding: 0 15px;
+
+}
+
+nav {
+    float: left;
+
+    img {
+        max-width: 140px;
+        margin-top: 12px;
+    }
+}
+
+.navmenu {
+    float: right;
+
+    ul {
+        margin: 40px 0 0 0;
+        padding: 0;
+
+        li {
+            display: inline;
+            list-style-type: none;
+
+            a {
+                text-decoration: none;
+                text-transform: uppercase;
+                color: #fff;
+                padding: 5px;
+                margin: 0 5px;
+                font-family: $body-font;
+                font-size: 16px;
+                @include transition (all, 0.3s, ease);
+
+                &:hover {
+                    color:$menu-hover;
+                }
+
+            }
+
+        }
+    }
+}
+/*===============End Header Section========*/
+/*===============About Section=============*/
+#about {
+    background: $white;
+
+    p {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+
+}
+/*===============End About Section=============*/
+/*===============Project Section=============*/
+#project {
+    background: $light-white;
+
+    ul {
+        text-align: center;
+
+        li {
+            display: inline-block;
+
+            a {
+                text-decoration: none;
+                background: #000;
+                color: #fff;
+                padding: 6px 25px;
+                margin: 0 3px;
+                display: block;
+            }
+        }
+    }
+
+    .project-content {
+        display: flex;
+
+        .project-item {
+            padding: 0 15px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+    }
+}
+/*===============End Project Section=============*/
+/*===============blog Section=============*/
+#blog {
+    .blog-content {
+        display: flex;
+    }
+
+    .blog-item {
+        padding: 0 15px;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+/*===============End blog Section=============*/
+/*===============Contact Section=============*/
+#contact {
+    background: $light-white;
+
+    form {
+        width: 800px;
+        margin: 0 auto;
+        display: block;
+
+        input {
+            width: 98%;
+            margin: 0 0 15px 0;
+            padding: 8px 1%;
+        }
+
+        textarea {
+            width: 98%;
+            padding: 8px 1%;
+        }
+    }
+
+}
+/*===============End Contact Section=============*/
+/*===============Footer Section=============*/
+
+#footer {
+    background: #419A1C;
+    overflow: hidden;
+    padding: 40px 15px;
+    display: block;
+
+    ul {
+        float: left;
+
+        li {
+            display: inline-block;
+
+            a {
+                color: $white;
+                text-decoration: none;
+                padding: 10px;
+                font-size: 15px;
+               @include transition(all, 0.3s, ease);
+                &:hover{
+                    color: $menu-hover;
+                }
+                
+            }
+        }
+
+    }
+
+    p {
+        float: right;
+        color: #fff;
+    }
+}
+/*===============End Footer Section=============*/
+
+/*====================Responsive Css=============*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+    #contact{
+        form{
+            width:100%;
+        }
+    }
+}
